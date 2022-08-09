@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/carrency-calculator-react/static/css/main.8636a087.css",
+    "main.js": "/carrency-calculator-react/static/js/main.116b3c36.js",
+    "static/js/787.9929fef6.chunk.js": "/carrency-calculator-react/static/js/787.9929fef6.chunk.js",
+    "index.html": "/carrency-calculator-react/index.html",
+    "main.8636a087.css.map": "/carrency-calculator-react/static/css/main.8636a087.css.map",
+    "main.116b3c36.js.map": "/carrency-calculator-react/static/js/main.116b3c36.js.map",
+    "787.9929fef6.chunk.js.map": "/carrency-calculator-react/static/js/787.9929fef6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8636a087.css",
+    "static/js/main.116b3c36.js"
+  ]
+}
