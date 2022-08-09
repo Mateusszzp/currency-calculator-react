@@ -1,7 +1,9 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# currency-calculator-react
 
+# DEMO
+
+https://mateusszzp.github.io/currency-calculator-react/
 ## Available Scripts
 
 In the project directory, you can run:
