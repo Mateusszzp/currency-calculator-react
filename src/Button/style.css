@@ -1,0 +1,20 @@
+
+.form__button {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    color: black;
+    background-color: #22f3b1;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 6px -6px 10px -1px rgba(0, 0, 0, 0.75);
+    font-size: 23px;
+}
+
+.form__button:hover {
+    background-color: hsl(161, 90%, 65%);
+}
+
+.form__button:active {
+    background-color: hsl(161, 90%, 80%);
+}
