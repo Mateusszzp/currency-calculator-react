@@ -7,7 +7,7 @@ const Form = ({ title, body, exchangeRate, result, button }) => {
     
     const onFormSubmit = (event) =>{
         event.preventDefault();
-        console.log(`Wartośc wypisana w polu:${quantity}`)
+        console.log(`Wartośc wypisana w polu:`)
     };
     return (
         <form className="js-form  form"

@@ -23,7 +23,7 @@ function App() {
     <main>
       <Form
         title="Kalkulator walut"
-        body={<Select quantity={quantity}
+        body={<Select
           currency={exchange}
         />}
         exchangeRate={<ExchangeRate />}
