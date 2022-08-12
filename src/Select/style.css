@@ -17,7 +17,7 @@
     border-color: hsl(0, 0%, 40%);
     background-color: hsl#d1f6ea;
 }
-.select__input {
+.enterAmount {
     border: 1px solid #cccc;
     width: 100%;
     max-width: 200px;
@@ -27,7 +27,7 @@
     box-shadow: 6px -6px 10px -1px rgba(0, 0, 0, 0.75);
 }
 
-.select__input:required {
+.enterAmount:required {
     border-color: hsl(0, 0%, 40%);
     background-color: hsl#d1f6ea;
 }

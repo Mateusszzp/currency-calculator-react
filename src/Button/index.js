@@ -1,7 +1,14 @@
 import "./style.css"
+
+
+
 const Button = () => (
     <p>
-        <button className="form__button">Przelicz</button>
+        <button
+            className="form__button"
+             >
+            Przelicz
+        </button>
     </p>
 );
 

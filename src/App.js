@@ -3,31 +3,35 @@ import Result from "./Result";
 import Button from "./Button";
 import Select from "./Select";
 import ExchangeRate from "./ExchangeRate";
+import Form from "./Form";
+import Footer from "./Footer";
+
 
 const exchange = [
-  { id: 1, content: "Euro" },
-  { id: 2, content: "Dolar" },
-  { id: 3, content: "Funt", done: false },
+  { id: 1, content: "Euro", rate: 4.6940 },
+  { id: 2, content: "Dolar", rate: 4.2375 },
+  { id: 3, content: "Funt", rate: 5.5831 },
 ];
 
 
 function App() {
+
+ 
+  
+  
   return (
     <main>
-      <form className="js-form  form">
-        <fieldset className="form__fieldset">
-          <legend className="form__legend">
-            Kalkulator walut
-          </legend>
-          <Select
-            currency={exchange}
-          />
-          <ExchangeRate />
-          <Result />
-        </fieldset>
-        <Button />
-      </form>
-      <footer className="footer">Wykonano w ramach zadania YouCode@ Mateusz Paśko</footer>
+      <Form
+        title="Kalkulator walut"
+        body={<Select quantity={quantity}
+          currency={exchange}
+        />}
+        exchangeRate={<ExchangeRate />}
+        result={<Result/>}
+        button={<Button/>}
+      />
+      
+      <Footer/>
     </main>
   );
 }
