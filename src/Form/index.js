@@ -2,12 +2,13 @@ import "./style.css";
 
 
 
-const Form = ({ title, body, exchangeRate, result, button }) => {
+const Form = ({ title, body, exchangeRate, result, button, quantity,exchange }) => {
 
     
     const onFormSubmit = (event) =>{
         event.preventDefault();
-        console.log(`Wartośc wypisana w polu:`)
+        console.log(`Wartośc wypisana w polu:${quantity}`);
+        alert(quantity * 2)
     };
     return (
         <form className="js-form  form"

@@ -1,20 +1,26 @@
 import "./style.css";
-import React, { useState } from 'react';
 
 
-const Select = (props) => {
-  const [quantity, setQuantity] = useState("");
-  
+
+const Select = ({ currency, quantity, setQuantity, }) => {
+
+
+
+
   return (
-    
+
     <div>
       <p>
         <span className="select"> Wpisz zł* </span>
         <input
-          value={quantity} 
+          value={quantity}
           onChange={({ target }) => setQuantity(target.value)}
-          required className="enterAmount"
-          type="number" name="zl" min="1" step="any"
+          required
+          className="enterAmount"
+          type="number"
+          name="zl"
+          min="1"
+          step="any"
         />
       </p>
       <p>
@@ -25,18 +31,19 @@ const Select = (props) => {
           className="setCurrency"
           name=" currency"
           list="currency">
-          {props.currency.map(currenc => (
-            <option key={currenc.id}>
+          {currency.map(currenc => (
+            <option
+              key={currenc.id}>
               {currenc.content}
             </option>
-            
-))}
-          </select>
-        </p>
-      </div>
-  )
+          ))}
+        </select>
+      </p>
+    </div>
+  
+  );
 
-}
+};
 
 
 export default Select;
