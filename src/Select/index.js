@@ -2,7 +2,7 @@ import "./style.css";
 
 
 
-const Select = ({ currency, quantity, setQuantity, }) => {
+const Select = ({ currency, quantity, setQuantity, selectCurrency, setSelectCurency }) => {
 
 
 
@@ -28,6 +28,8 @@ const Select = ({ currency, quantity, setQuantity, }) => {
           className="select"> Wybierz walute
         </span>
         <select
+        value={selectCurrency}
+        onChange={({ target }) => setSelectCurency(target.value)}
           className="setCurrency"
           name=" currency"
           list="currency">

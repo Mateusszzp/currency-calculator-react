@@ -11,22 +11,21 @@ import React, { useState } from 'react';
 
 
 function App() {
-  const [quantity, setQuantity] = useState("");
-  const [exchange, setExchange] = useState([
+  
+  const exchange = [
     { id: 1, content: "Euro", rate: 4.6940 },
     { id: 2, content: "Dolar", rate: 4.2375 },
     { id: 3, content: "Funt", rate: 5.5831 },
-  ]);
+  ];
+  const [quantity, setQuantity] = useState("");
+  const [selectCurrency, setSelectCurency] = useState(exchange[0])
+  
 
 
-
-
-
-
-
-  return (
+return (
     <main>
-      <Form 
+      <Form
+        selectCurrency={selectCurrency}
         quantity={quantity}
         exchange={exchange}
         title="Kalkulator walut"
@@ -34,9 +33,12 @@ function App() {
           quantity={quantity}
           setQuantity={setQuantity}
           currency={exchange}
+          selectCurrency={selectCurrency}
+          setSelectCurency={setSelectCurency}
         />}
         exchangeRate={<ExchangeRate />}
-        result={<Result />}
+        result={<Result
+          quantity={quantity} />}
         button={<Button />}
       />
 
