@@ -28,21 +28,23 @@ const Select = ({ currency, quantity, setQuantity, selectCurrency, setSelectCure
           className="select"> Wybierz walute
         </span>
         <select
-        value={selectCurrency}
-        onChange={({ target }) => setSelectCurency(target.value)}
+          value={selectCurrency}
+          onChange={({ target }) => setSelectCurency(target.value)}
           className="setCurrency"
           name=" currency"
           list="currency">
-          {currency.map(currenc => (
+          {currency.map((currenc) => (
             <option
               key={currenc.id}>
               {currenc.content}
+
             </option>
-          ))}
+          ))};
         </select>
       </p>
+
     </div>
-  
+
   );
 
 };

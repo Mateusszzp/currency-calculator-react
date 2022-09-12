@@ -2,9 +2,9 @@ import "./style.css"
 
 
 
-const Button = () => (
+const Button = (props) => (
     <p>
-        <button
+        <button 
             className="form__button"
              >
             Przelicz
