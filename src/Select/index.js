@@ -2,10 +2,8 @@ import "./style.css";
 
 
 
-const Select = ({ currency, quantity, setQuantity, selectCurrency, setSelectCurency }) => {
-
-
-
+const Select = ({ currency, quantity, 
+  setQuantity, selectCurrency, setSelectCurency }) => {
 
   return (
 
@@ -37,17 +35,12 @@ const Select = ({ currency, quantity, setQuantity, selectCurrency, setSelectCure
             <option
               key={currenc.id}>
               {currenc.content}
-
             </option>
           ))};
         </select>
       </p>
 
     </div>
-
   );
-
 };
-
-
 export default Select;

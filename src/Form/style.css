@@ -7,7 +7,7 @@
 }
 .form__fieldset {
   border: 1px solid #cccc;
-  border-radius: 8px;
+  border-radius: 20px;
   padding: 20px;
   box-shadow: 6px -6px 10px -1px rgba(0, 0, 0, 0.75);
   background-color: #fbfdfc;

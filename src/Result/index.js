@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Result = () => (
+const Result = ({isResult, currencyName, quantity}) => (
     
     <p>
-        <strong className="formResult">N/a</strong>
+        <strong className="formResult"> {quantity} PLN = {isResult} {currencyName} </strong>
     </p>
 
 );

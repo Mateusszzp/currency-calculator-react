@@ -2,13 +2,17 @@ import "./style.css";
 
 
 
-const Form = ({ isResult,title, body, exchangeRate, result, button, quantity, currency }) => {
+const Form = ({ setCurrencyName, setResult, title, body,
+  exchangeRate, result, button, quantity, currency, }) => {
 
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     const isResult = quantity / currency.rate
-    console.log(isResult.toFixed(2))
+    setResult(isResult.toFixed(2));
+
+    const currencyName = currency.shortcut
+    setCurrencyName(currencyName);
   };
 
   return (

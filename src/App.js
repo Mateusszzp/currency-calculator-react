@@ -8,26 +8,30 @@ import Footer from "./Footer";
 import React, { useState } from 'react';
 
 
-
-
 function App() {
 
   const exchange = [
-    { id: 1, content: "Euro", rate: 4.6940 },
-    { id: 2, content: "Dolar", rate: 4.2375 },
-    { id: 3, content: "Funt", rate: 5.5831 },
+    { id: 1, content: "Euro", rate: 4.6940, shortcut: "EUR" },
+    { id: 2, content: "Dolar Amerykański", rate: 4.2375, shortcut: "USD" },
+    { id: 3, content: "Funt Brytyjski", rate: 5.5831, shortcut: "GBP" },
+    { id: 4, content: "Kuna Chorwacka", rate: 0.6269, shortcut: "HRK" },
   ];
+
+  const [currencyName, setCurrencyName] = useState(0)
   const [quantity, setQuantity] = useState("");
   const [selectCurrency, setSelectCurency] = useState(exchange[0].content)
+  const [isResult, setResult] = useState("")
 
   const currency = exchange.find((currency) => currency.content === selectCurrency);
-
 
 
   return (
 
     <main>
       <Form
+        currencyName={currencyName}
+        setCurrencyName={setCurrencyName}
+        setResult={setResult}
         currency={currency}
         selectCurrency={selectCurrency}
         quantity={quantity}
@@ -41,13 +45,17 @@ function App() {
         />}
         exchangeRate={<ExchangeRate />}
         result={<Result
+          quantity={quantity}
+          currencyName={currencyName}
+          isResult={isResult}
+          selectCurrency={selectCurrency}
         />}
-        button={<Button />}
+        button={<Button
+        />}
       />
-
       <Footer />
     </main>
   );
-}
+};
 
 export default App;
