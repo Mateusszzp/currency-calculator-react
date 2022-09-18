@@ -1,9 +1,23 @@
 
 # currency-calculator-react
+## Technologies used
+- BEM 
+- Flex Box
+- ES6+
+- React JS
 
-# DEMO
+## Description
+A simple application for currency conversion
+
+
+
+### DEMO
 
 https://mateusszzp.github.io/currency-calculator-react/
+
+
+![The presentation](/currency_calculator.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
