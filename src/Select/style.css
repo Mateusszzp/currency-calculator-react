@@ -7,7 +7,7 @@
 .setCurrency {
     border: 1px solid #cccc;
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     border-radius: 6px;
     background-color: #d1f6ea;
     padding: 8px;
@@ -20,7 +20,7 @@
 .enterAmount {
     border: 1px solid #cccc;
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     border-radius: 6px;
     background-color: #d1f6ea;
     padding: 8px;
