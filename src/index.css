@@ -6,9 +6,9 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   font-family: 'Roboto Slab', serif;
-  background-image: url("https://st2.depositphotos.com/1000128/5225/i/950/depositphotos_52250241-stock-photo-stacks-of-500-euro-banknotes.jpg");
+  background-image: url("background.jpg");
   background-size: 200px;
   background-attachment: fixed;
   background-repeat: space;

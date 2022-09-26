@@ -1,8 +1,7 @@
 import "./index.css"
 import Result from "./Result";
-import Button from "./Button";
 import Select from "./Select";
-import ExchangeRate from "./ExchangeRate";
+
 import Form from "./Form";
 import Footer from "./Footer";
 import React, { useState } from 'react';
@@ -43,15 +42,13 @@ function App() {
           selectCurrency={selectCurrency}
           setSelectCurency={setSelectCurency}
         />}
-        exchangeRate={<ExchangeRate />}
         result={<Result
           quantity={quantity}
           currencyName={currencyName}
           isResult={isResult}
           selectCurrency={selectCurrency}
         />}
-        button={<Button
-        />}
+
       />
       <Footer />
     </main>

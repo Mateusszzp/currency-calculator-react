@@ -1,18 +1,23 @@
 import "./style.css";
-
+import ExchangeRate from "./ExchangeRate";
 
 
 const Form = ({ setCurrencyName, setResult, title, body,
-  exchangeRate, result, button, quantity, currency, }) => {
+  exchangeRate, result, quantity, currency }) => {
 
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+    
     const isResult = quantity / currency.rate
     setResult(isResult.toFixed(2));
 
+    
     const currencyName = currency.shortcut
     setCurrencyName(currencyName);
+    console.log(`${quantity} PLN = ${isResult.toFixed(2)} ${currencyName}`)
+  
+   
   };
 
   return (
@@ -26,10 +31,16 @@ const Form = ({ setCurrencyName, setResult, title, body,
           {title}
         </legend>
         {body}
-        {exchangeRate}
+        <ExchangeRate/>
         {result}
-      </fieldset>
-      {button}
+        </fieldset>
+      <p>
+      <button
+        className="form__button"
+      >
+        Przelicz
+      </button>
+    </p>
     </form>
   )
 

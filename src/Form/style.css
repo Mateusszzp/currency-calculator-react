@@ -12,7 +12,7 @@
   box-shadow: 6px -6px 10px -1px rgba(0, 0, 0, 0.75);
   background-color: #fbfdfc;
   font-size: 23px;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 .form__legend {
   border: 1px solid #cccc;
@@ -20,4 +20,24 @@
   background-color: #22f3b1;
   padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.form__button {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  color: black;
+  background-color: #22f3b1;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 6px -6px 10px -1px rgba(0, 0, 0, 0.75);
+  font-size: 23px;
+}
+
+.form__button:hover {
+  background-color: hsl(161, 90%, 65%);
+}
+
+.form__button:active {
+  background-color: hsl(161, 90%, 80%);
 }
