@@ -1,13 +1,17 @@
 import "./style.css";
 
-const Result = ({ isResult, currencyName, quantity }) => (
+const Result = ({ result }) => (
+  <p>
+    <strong className="result">
+      {result !== undefined && (
+        <>
+          {result.sourceAmount}&nbsp;PLN&nbsp;=
+          {" "}
 
-    <p>
-
-        <strong className="formResult">  {quantity} PLN = {isResult} {currencyName} </strong>
-
-    </p>
-
+          {result.targetAmount.toFixed(2)}&nbsp;{result.selectCurrency}
+        </>
+      )}
+    </strong>
+  </p>
 );
-
 export default Result

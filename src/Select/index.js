@@ -2,11 +2,10 @@ import "./style.css";
 
 
 
-const Select = ({ currency, quantity, 
+const Select = ({ currency, quantity,
   setQuantity, selectCurrency, setSelectCurency }) => {
 
   return (
-
     <div>
       <p>
         <span className="select"> Wpisz zł* </span>
@@ -29,17 +28,16 @@ const Select = ({ currency, quantity,
           value={selectCurrency}
           onChange={({ target }) => setSelectCurency(target.value)}
           className="setCurrency"
-          name=" currency"
-          list="currency">
+        >
           {currency.map((currenc) => (
             <option
-              key={currenc.id}>
-              {currenc.content}
+              key={currenc.shortcut}
+              value={currenc.shortcut}>
+              {currenc.name}
             </option>
           ))};
         </select>
       </p>
-
     </div>
   );
 };

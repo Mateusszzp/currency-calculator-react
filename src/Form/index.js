@@ -1,46 +1,52 @@
 import "./style.css";
 import ExchangeRate from "./ExchangeRate";
+import Select from "../Select";
+import Result from "../Result";
+import exchange from "../exchange";
+import React, { useState } from 'react';
 
 
-const Form = ({ setCurrencyName, setResult, title, body,
-  exchangeRate, result, quantity, currency }) => {
+const Form = ({ result, calculateResult }) => {
 
+
+  const [quantity, setQuantity] = useState("");
+  const [selectCurrency, setSelectCurency] = useState(exchange[0].shortcut)
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    
-    const isResult = quantity / currency.rate
-    setResult(isResult.toFixed(2));
+    calculateResult(selectCurrency, quantity);
+    setQuantity("")
 
-    
-    const currencyName = currency.shortcut
-    setCurrencyName(currencyName);
-    console.log(`${quantity} PLN = ${isResult.toFixed(2)} ${currencyName}`)
-  
-   
   };
-
   return (
-
     <form
       onSubmit={onFormSubmit}
       className="js-form  form"
     >
       <fieldset className="form__fieldset">
         <legend className="form__legend">
-          {title}
+          Kalkulator walut
         </legend>
-        {body}
-        <ExchangeRate/>
-        {result}
-        </fieldset>
+        <Select
+          quantity={quantity}
+          setQuantity={setQuantity}
+          currency={exchange}
+          selectCurrency={selectCurrency}
+          setSelectCurency={setSelectCurency}
+        />
+        <ExchangeRate />
+        <Result
+          result={result}
+          selectCurrency={selectCurrency}
+        />
+      </fieldset>
       <p>
-      <button
-        className="form__button"
-      >
-        Przelicz
-      </button>
-    </p>
+        <button
+          className="form__button"
+        >
+          Przelicz
+        </button>
+      </p>
     </form>
   )
 
