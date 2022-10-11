@@ -1,7 +1,7 @@
 import "./index.css"
 import Form from "./Form";
 import Footer from "./Footer";
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import exchange from "./exchange"
 
 
@@ -20,7 +20,7 @@ function App() {
       selectCurrency,
     });
   }
-  return (
+ return (
     <main>
       <Form
         result={result}

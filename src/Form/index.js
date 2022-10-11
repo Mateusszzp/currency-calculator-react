@@ -4,6 +4,8 @@ import Select from "../Select";
 import Result from "../Result";
 import exchange from "../exchange";
 import React, { useState } from 'react';
+import ShowTime from "./ShowTime"
+
 
 
 const Form = ({ result, calculateResult }) => {
@@ -27,6 +29,10 @@ const Form = ({ result, calculateResult }) => {
         <legend className="form__legend">
           Kalkulator walut
         </legend>
+        <ShowTime 
+        />
+
+
         <Select
           quantity={quantity}
           setQuantity={setQuantity}

@@ -5,7 +5,7 @@ const Result = ({ result }) => (
     <strong className="result">
       {result !== undefined && (
         <>
-          {result.sourceAmount}&nbsp;PLN&nbsp;=
+          {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=
           {" "}
 
           {result.targetAmount.toFixed(2)}&nbsp;{result.selectCurrency}
