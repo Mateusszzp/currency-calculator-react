@@ -4,25 +4,19 @@ import React, { useState, useEffect, } from 'react';
 
 
 const ShowTime = () => {
-  const [time, setTime] = useState(new Date().toLocaleString(undefined, {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  }))
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTime(new Date().toLocaleString(undefined, {
+    const myDate = new Date().toLocaleString(undefined, {
         weekday: "long",
         day: "numeric",
         month: "long",
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
-      }))
+      })
+    const [time, setTime] = useState(myDate)
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(myDate)
     }, 1000);
     return () => {
       clearInterval(intervalId);
