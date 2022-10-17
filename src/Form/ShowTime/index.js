@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import "./style.css";
-const ShowTime = () => {
-    const [time, setTime] = useState("")
+import "./style.css"
+import React, { useState, useEffect, } from 'react';
 
 
     useEffect(() => {
@@ -11,20 +9,25 @@ const ShowTime = () => {
                 minute: "numeric", second: "numeric"
             }))
         }, 1000)
-    },[time])
+    })
 
 
 
 
 
-    return (
-        <p>
-           <span className="time">{time}</span> 
-        </p>
-    )
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime(myDate)
+    }, 1000);
+    return () => {
+      clearInterval(intervalId);
+    }
+  }, [time]);
+  return (
+    <p>
+      <span className="time">Dzisiaj jest {time}</span>
+    </p>
+  )
 }
-
-
-
 export default ShowTime
 
