@@ -11,7 +11,7 @@ const ShowTime = () => {
                 minute: "numeric", second: "numeric"
             }))
         }, 1000)
-    })
+    },[time])
 
 
 
