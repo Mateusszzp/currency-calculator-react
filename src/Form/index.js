@@ -29,10 +29,8 @@ const Form = ({ result, calculateResult }) => {
         <legend className="form__legend">
           Kalkulator walut
         </legend>
-        <ShowTime 
-        />
-
-
+        <ShowTime
+         />
         <Select
           quantity={quantity}
           setQuantity={setQuantity}
