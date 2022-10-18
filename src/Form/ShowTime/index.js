@@ -2,26 +2,22 @@ import "./style.css"
 import React, { useState, useEffect, } from 'react';
 
 const ShowTime = () => {
-  const myDate = new Date().toLocaleString(undefined, {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    hour: "numeric",
-    minute: "numeric",
-    second: "numeric",
-  });
-  const [time, setTime] = useState(myDate);
+
+  const myDate = () => {
+    return new Date().toLocaleString(undefined, {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    })
+  };
+  const [time, setTime] = useState(myDate());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTime(new Date().toLocaleString(undefined, {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric",
-      }))
+      setTime(myDate())
     }, 1000);
     return () => {
       clearInterval(intervalId);
@@ -33,6 +29,6 @@ const ShowTime = () => {
       <span className="time">Dzisiaj jest {time}</span>
     </p>
   )
-}
-export default ShowTime
+};
+export default ShowTime;
 
