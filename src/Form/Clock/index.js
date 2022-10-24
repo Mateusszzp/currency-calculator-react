@@ -1,10 +1,11 @@
 import "./style.css"
 import React, { useState, useEffect, } from 'react';
 
-const ShowTime = () => {
-
-  const myDate = () => {
-    return new Date().toLocaleString(undefined, {
+const Clock = () => {
+  const [time, setTime] = useState(new Date());
+  
+  const myDate = (time) => {
+    return time.toLocaleString(undefined, {
       weekday: "long",
       day: "numeric",
       month: "long",
@@ -13,11 +14,9 @@ const ShowTime = () => {
       second: "numeric",
     })
   };
-  const [time, setTime] = useState(myDate());
-
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTime(myDate())
+      setTime(new Date());
     }, 1000);
     return () => {
       clearInterval(intervalId);
@@ -26,9 +25,9 @@ const ShowTime = () => {
 
   return (
     <p>
-      <span className="time">Dzisiaj jest {time}</span>
+      <span className="time">Dzisiaj jest {myDate(time)}</span>
     </p>
   )
 };
-export default ShowTime;
+export default Clock;
 
