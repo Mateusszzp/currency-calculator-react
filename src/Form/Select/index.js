@@ -1,7 +1,5 @@
 import React from 'react'
-import "./style.css";
-
-
+import { SelectStyled, Input, Option } from "./styled";
 
 const Select = ({ currency, quantity,
   setQuantity, selectCurrency, setSelectCurency }) => {
@@ -9,12 +7,11 @@ const Select = ({ currency, quantity,
   return (
     <div>
       <p>
-        <span className="select"> Wpisz zł* </span>
-        <input
+        <SelectStyled > Wpisz zł* </SelectStyled>
+        <Input
           value={quantity}
           onChange={({ target }) => setQuantity(target.value)}
           required
-          className="enterAmount"
           type="number"
           name="zl"
           min="1"
@@ -22,14 +19,10 @@ const Select = ({ currency, quantity,
         />
       </p>
       <p>
-        <span
-          className="select"> Wybierz walute
-        </span>
-        <select
+        <SelectStyled> Wybierz walute </SelectStyled>
+        <Option
           value={selectCurrency}
-          onChange={({ target }) => setSelectCurency(target.value)}
-          className="setCurrency"
-        >
+          onChange={({ target }) => setSelectCurency(target.value)}>
           {currency.map((currenc) => (
             <option
               key={currenc.shortcut}
@@ -37,7 +30,7 @@ const Select = ({ currency, quantity,
               {currenc.name}
             </option>
           ))};
-        </select>
+        </Option>
       </p>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react'
-import "./style.css";
+import { ResultStyled } from './styled';
 
 const Result = ({ result }) => (
   <p>
-    <strong className="result">
+    <ResultStyled>
       {result !== undefined && (
         <>
           {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=
@@ -12,7 +12,7 @@ const Result = ({ result }) => (
           {result.targetAmount.toFixed(2)}&nbsp;{result.selectCurrency}
         </>
       )}
-    </strong>
+    </ResultStyled>
   </p>
 );
 export default Result

@@ -1,9 +1,9 @@
 import React from 'react'
-import "./style.css";
+import { FooterStyled } from "./styled"
 
 const Footer = () => (
-    <footer className="footer">
+    <FooterStyled>
         Wykonano w ramach zadania YouCode@ Mateusz Paśko
-    </footer>
-)
+    </FooterStyled>
+);
 export default Footer;

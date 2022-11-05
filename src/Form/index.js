@@ -1,15 +1,12 @@
-import "./style.css";
 import ExchangeRate from "./ExchangeRate";
 import Select from "./Select";
 import Result from "./Result";
 import exchange from "../exchange";
 import React, { useState } from 'react';
 import Clock from "./Clock"
-
-
+import { FormStyled, Fieldset, Legend, Button } from "./styled";
 
 const Form = ({ result, calculateResult }) => {
-
 
   const [quantity, setQuantity] = useState("");
   const [selectCurrency, setSelectCurency] = useState(exchange[0].shortcut)
@@ -21,16 +18,15 @@ const Form = ({ result, calculateResult }) => {
 
   };
   return (
-    <form
+    <FormStyled
       onSubmit={onFormSubmit}
-      className="js-form  form"
     >
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">
+      <Fieldset>
+        <Legend>
           Kalkulator walut
-        </legend>
+        </Legend>
         <Clock
-         />
+        />
         <Select
           quantity={quantity}
           setQuantity={setQuantity}
@@ -38,21 +34,18 @@ const Form = ({ result, calculateResult }) => {
           selectCurrency={selectCurrency}
           setSelectCurency={setSelectCurency}
         />
-        <ExchangeRate/>
+        <ExchangeRate />
         <Result
           result={result}
           selectCurrency={selectCurrency}
         />
-      </fieldset>
+      </Fieldset>
       <p>
-        <button
-          className="form__button"
-        >
+        <Button>
           Przelicz
-        </button>
+        </Button>
       </p>
-    </form>
+    </FormStyled>
   )
-
 };
 export default Form;

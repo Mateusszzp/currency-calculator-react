@@ -1,9 +1,9 @@
-import "./style.css"
 import React, { useState, useEffect, } from 'react';
+import { Time } from "./styled";
 
 const Clock = () => {
   const [time, setTime] = useState(new Date());
-  
+
   const myDate = (time) => {
     return time.toLocaleString(undefined, {
       weekday: "long",
@@ -25,7 +25,9 @@ const Clock = () => {
 
   return (
     <p>
-      <span className="time">Dzisiaj jest {myDate(time)}</span>
+      <Time className="time">
+        Dzisiaj jest {myDate(time)}
+      </Time>
     </p>
   )
 };
