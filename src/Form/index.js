@@ -1,7 +1,7 @@
 import "./style.css";
 import ExchangeRate from "./ExchangeRate";
-import Select from "../Select";
-import Result from "../Result";
+import Select from "./Select";
+import Result from "./Result";
 import exchange from "../exchange";
 import React, { useState } from 'react';
 import Clock from "./Clock"
@@ -38,7 +38,7 @@ const Form = ({ result, calculateResult }) => {
           selectCurrency={selectCurrency}
           setSelectCurency={setSelectCurency}
         />
-        <ExchangeRate />
+        <ExchangeRate/>
         <Result
           result={result}
           selectCurrency={selectCurrency}
