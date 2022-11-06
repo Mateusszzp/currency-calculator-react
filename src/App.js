@@ -1,4 +1,3 @@
-import "./index.css"
 import Form from "./Form";
 import Footer from "./Footer";
 import React, {  useState } from 'react'
