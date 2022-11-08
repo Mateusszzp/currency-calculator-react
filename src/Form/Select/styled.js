@@ -7,13 +7,13 @@ export const SelectStyled = styled.span`
     margin-right: 50px;
 `;
 export const Input = styled.input`
-    border: 1px solid #cccc;
+    border: 1px solid ${({theme}) => theme.colors.doveGray};
     width: 100%;
     max-width: 250px;
     border-radius: 6px;
-    background-color: #d1f6ea;
+    background:${({theme}) => theme.colors.grannyApple};
     padding: 8px;
-    box-shadow: 6px -6px 10px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px -6px 10px -1px ${({theme}) => theme.colors.shadow};
 
 &:required {
     border-color: hsl(0, 0%, 40%);
@@ -22,11 +22,11 @@ export const Input = styled.input`
 `;
 
 export const Option = styled.select`
-    border: 1px solid #cccc;
+    border: 1px solid ${({theme}) => theme.colors.doveGray};
     width: 100%;
     max-width: 250px;
     border-radius: 6px;
-    background-color: #d1f6ea;
+    background:${({theme}) => theme.colors.grannyApple};
     padding: 8px;
-    box-shadow: 6px -6px 10px -1px rgba(0, 0, 0, 0.75)
+    box-shadow: 6px -6px 10px -1px ${({theme}) => theme.colors.shadow};
 `;

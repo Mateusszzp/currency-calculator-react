@@ -1,8 +1,12 @@
 import React from 'react'
 import { SelectStyled, Input, Option } from "./styled";
 
-const Select = ({ currency, quantity,
-  setQuantity, selectCurrency, setSelectCurency }) => {
+const Select = ({
+  currency,
+  quantity,
+  setQuantity,
+  selectCurrency,
+  setSelectCurency }) => {
 
   return (
     <div>
