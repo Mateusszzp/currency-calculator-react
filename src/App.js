@@ -5,6 +5,7 @@ import exchange from "./exchange"
 
 
 
+
 function App() {
   const [result, setResult] = useState();
 
@@ -22,9 +23,10 @@ function App() {
  return (
     <main>
       <Form
+     
         result={result}
         calculateResult={calculateResult} />
-      <Footer />
+      <Footer/>
     </main>
   );
 };

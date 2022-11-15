@@ -5,6 +5,7 @@
 - Flex Box
 - ES6+
 - React JS
+- React styled-components
 
 ## Description
 A simple application for currency conversion

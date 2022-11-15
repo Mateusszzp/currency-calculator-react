@@ -1,5 +1,8 @@
 import React from 'react'
 import { SelectStyled, Input, Option } from "./styled";
+import axios from "axios"
+import { useEffect, useState } from 'react'
+
 
 const Select = ({
   currency,
@@ -7,6 +10,18 @@ const Select = ({
   setQuantity,
   selectCurrency,
   setSelectCurency }) => {
+    const [post, setPost] = useState(null);
+ 
+useEffect(() => {
+  axios.get('https://api.exchangerate.host/latest')
+  .then((response) => {
+    setPost(response.data);
+  })
+ },[]);
+
+if (!post) return null;
+console.log(post)
+
 
   return (
     <div>
