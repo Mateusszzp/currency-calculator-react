@@ -1,7 +1,5 @@
-import React from 'react'
 import { SelectStyled, Input, Option } from "./styled";
-import axios from "axios"
-import { useEffect, useState } from 'react'
+import { useDataApi } from "../../useDataApi"
 
 
 const Select = ({
@@ -10,21 +8,15 @@ const Select = ({
   setQuantity,
   selectCurrency,
   setSelectCurency }) => {
-    const [post, setPost] = useState(null);
- 
-useEffect(() => {
-  axios.get('https://api.exchangerate.host/latest')
-  .then((response) => {
-    setPost(response.data);
-  })
- },[]);
-
-if (!post) return null;
+    
+    const {post} = useDataApi();
 console.log(post)
+console.log('https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,CZK')
 
 
   return (
     <div>
+      
       <p>
         <SelectStyled > Wpisz zł* </SelectStyled>
         <Input
@@ -51,6 +43,7 @@ console.log(post)
           ))};
         </Option>
       </p>
+     
     </div>
   );
 };
