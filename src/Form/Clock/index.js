@@ -2,7 +2,7 @@ import { Time } from "./styled";
 import { useCurrentDate } from "./useCurrentDate"
 
 const Clock = () => {
-  const { time, myDate } = useCurrentDate()
+  const { time, myDate } = useCurrentDate();
 
   return (
     <p>

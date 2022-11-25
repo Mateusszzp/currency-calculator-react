@@ -10,11 +10,12 @@ const Select = ({
   setSelectCurency }) => {
     
     const {post} = useDataApi();
-console.log(post)
-console.log('https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,CZK')
+   
+ 
+    console.log(post)
+   
 
-
-  return (
+   return (
     <div>
       
       <p>
@@ -34,11 +35,11 @@ console.log('https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,CZK')
         <Option
           value={selectCurrency}
           onChange={({ target }) => setSelectCurency(target.value)}>
-          {currency.map((currenc) => (
+          {Object.keys(post).map((currenc) => (
             <option
-              key={currenc.shortcut}
-              value={currenc.shortcut}>
-              {currenc.name}
+             key={currenc}
+             value={currenc}>
+              {currenc}
             </option>
           ))};
         </Option>
