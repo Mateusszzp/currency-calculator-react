@@ -9,7 +9,7 @@ const Select = ({
   selectCurrency,
   setSelectCurency }) => {
     
-    const {post} = useDataApi();
+    const post = useDataApi();
    
  
     console.log(post)

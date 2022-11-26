@@ -1,22 +1,44 @@
-import axios from "axios"
+
 import { useEffect, useState } from 'react'
 
 export const useDataApi = () => {
 
-  const [post, setPost] = useState("loand");
+  const [post, setPost] = useState("");
 
+
+  useEffect(() => {
+    const dataApi = async () => {
+      try {
+        const response = await fetch('https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP')
+
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        };
+
+
+        const { date, rates } = await response.json()
+        setPost({
+          date,
+          rates,
+          state: "success",
+          
+        });
+
+      }
+      catch (error) {
+        setPost({
+          state: "error",
+        })
+      }
+
+
+     
+
+    };
+    setTimeout(dataApi, 2000)
+  }, []);
   
-useEffect(() => {
-  fetch('https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP')
-.then((respons) => respons.json())
-.then(data => setPost(data))
-
-.catch((error) => console.error("Jest jakiś błąd", error));
-   
-},[])
-
-
-
-  return { post }
-}
+  
+  return post;
+};
 
