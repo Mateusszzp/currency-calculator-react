@@ -1,9 +1,8 @@
-
 import { useEffect, useState } from 'react'
 
 export const useDataApi = () => {
 
-  const [post, setPost] = useState("");
+  const [post, setPost] = useState({state : "loading"});
 
 
   useEffect(() => {
@@ -35,10 +34,10 @@ export const useDataApi = () => {
      
 
     };
-    setTimeout(dataApi, 2000)
+    setTimeout(dataApi, 500)
   }, []);
   
   
-  return post;
+  return {post};
 };
 
