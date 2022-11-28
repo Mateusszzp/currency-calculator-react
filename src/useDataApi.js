@@ -1,43 +1,38 @@
 import { useEffect, useState } from 'react'
+import Loading from "./Loading"
+
 
 export const useDataApi = () => {
-
-  const [post, setPost] = useState({state : "loading"});
-
+  const [post, setPost] = useState({
+    state: Loading
+  });
 
   useEffect(() => {
     const dataApi = async () => {
       try {
-        const response = await fetch('https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP')
+        const response = await fetch(
+          'https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP'
+        )
 
         if (!response.ok) {
           throw new Error(response.statusText);
         };
 
-
         const { date, rates } = await response.json()
         setPost({
+          state: "Kursy wlut pochodzą z NBP na dzień ",
           date,
           rates,
-          state: "success",
-          
         });
-
       }
       catch (error) {
         setPost({
-          state: "error",
+          state: "UPS coś poszło nie tak zobacz czy masz połączenie z internetem",
         })
       }
-
-
-     
-
     };
-    setTimeout(dataApi, 500)
+    setTimeout(dataApi, 3000)
   }, []);
-  
-  
-  return {post};
+  return { post };
 };
 
