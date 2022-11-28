@@ -1,4 +1,4 @@
-import ExchangeRate from "./ExchangeRate";
+
 import Select from "./Select";
 import Result from "./Result";
 import exchange from "../exchange";
@@ -36,7 +36,7 @@ const Form = ({ result, calculateResult }) => {
           selectCurrency={selectCurrency}
           setSelectCurency={setSelectCurency}
         />
-        <ExchangeRate />
+        
         <Result
           result={result}
           selectCurrency={selectCurrency}
