@@ -6,6 +6,7 @@
 - ES6+
 - React JS
 - React styled-components
+- API
 
 ## Description
 A simple application for currency conversion
