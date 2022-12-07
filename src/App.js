@@ -1,7 +1,6 @@
 import Form from "./Form";
 import Footer from "./Footer";
 import React, { useState } from 'react'
-import exchange from "./exchange"
 import { useDataApi } from "./useDataApi"
 
 
