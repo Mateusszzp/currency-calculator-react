@@ -10,7 +10,7 @@ const Select = ({
   setSelectCurency }) => {
     
     const {post} = useDataApi();
-   console.log(post)
+   console.log(post.rates)
    return (
     <div>
       

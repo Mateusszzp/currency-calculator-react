@@ -13,7 +13,7 @@ export const useDataApi = () => {
         const response = await fetch(
           'https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP'
         )
-        .then(response => response)
+        
 
         if (!response.ok) {
           throw new Error(response.statusText);
