@@ -14,7 +14,7 @@ function App() {
 
     setResult({
       sourceAmount: +quantity,
-      targetAmount: quantity / rate,
+      targetAmount: quantity * rate,
       selectCurrency,
     });
     console.log(rate)
