@@ -10,15 +10,12 @@ export const useDataApi = () => {
   useEffect(() => {
     const dataApi = async () => {
       try {
-        const response = await fetch(
-          'https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP'
+        const response = await (
+          'https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,HRK'
         )
-        
-
         if (!response.ok) {
           throw new Error(response.statusText);
         };
-
         const { date, rates } = await response.json()
         setPost({
           state: "Kursy wlut pochodzą z NBP na dzień ",

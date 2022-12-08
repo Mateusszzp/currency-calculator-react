@@ -3,17 +3,16 @@ import { useDataApi } from "../../useDataApi"
 import { State } from "../../styledState"
 import { AiFillBank } from "react-icons/ai"
 const Select = ({
-  
+
   quantity,
   setQuantity,
   selectCurrency,
   setSelectCurency }) => {
-    
-    const {post} = useDataApi();
-   console.log(post.rates)
-   return (
+
+  const { post } = useDataApi();
+
+  return (
     <div>
-      
       <p>
         <SelectStyled > Wpisz zł* </SelectStyled>
         <Input
@@ -33,19 +32,21 @@ const Select = ({
           onChange={({ target }) => setSelectCurency(target.value)}>
           {post.rates && Object.keys(post.rates).map((currency) => (
             <option
-             key={currency}
-             value={currency}>
+              key={currency}
+              value={currency}>
               {currency}
             </option>
           ))};
         </Option>
       </p>
-      
-     <p> <State>{post.state} </State> <State date>{post.date} <AiFillBank/></State></p>
-     
-    
+      <p> <State>{post.state}
+      </State>
+        <State date>{post.date}
+          <AiFillBank />
+        </State>
+      </p>
     </div>
-    
+
   );
 };
 export default Select;

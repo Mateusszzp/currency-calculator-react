@@ -1,26 +1,20 @@
-
 import Select from "./Select";
 import Result from "./Result";
-import exchange from "../exchange";
 import React, { useState } from 'react';
 import Clock from "./Clock";
 import { FormStyled, Fieldset, Legend, Button } from "./styled";
 
 const Form = ({ result, calculateResult }) => {
 
-
   const [quantity, setQuantity] = useState("");
-  const [selectCurrency, setSelectCurency] = useState(exchange[0].shortcut)
-  
+  const [selectCurrency, setSelectCurency] = useState()
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(selectCurrency, quantity);
     setQuantity("")
-  
   };
   return (
-    
     <FormStyled
       onSubmit={onFormSubmit}
     >
@@ -28,15 +22,13 @@ const Form = ({ result, calculateResult }) => {
         <Legend>
           Kalkulator walut
         </Legend>
-        <Clock/>
+        <Clock />
         <Select
           quantity={quantity}
           setQuantity={setQuantity}
-          currency={exchange}
           selectCurrency={selectCurrency}
           setSelectCurency={setSelectCurency}
         />
-        
         <Result
           result={result}
           selectCurrency={selectCurrency}

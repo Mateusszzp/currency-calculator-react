@@ -3,8 +3,6 @@ import Footer from "./Footer";
 import React, { useState } from 'react'
 import { useDataApi } from "./useDataApi"
 
-
-
 function App() {
   const [result, setResult] = useState();
   const { post } = useDataApi()
@@ -16,9 +14,7 @@ function App() {
       targetAmount: quantity * rate,
       selectCurrency,
     });
-    console.log(rate)
   }
-
   return (
     <main>
       <Form
