@@ -7,7 +7,7 @@ import { FormStyled, Fieldset, Legend, Button } from "./styled";
 const Form = ({ result, calculateResult }) => {
 
   const [quantity, setQuantity] = useState("");
-  const [selectCurrency, setSelectCurency] = useState()
+  const [selectCurrency, setSelectCurency] = useState("EUR")
 
   const onFormSubmit = (event) => {
     event.preventDefault();
