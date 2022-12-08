@@ -1,9 +1,7 @@
-import { SelectStyled, Input, Option } from "./styled";
-import { useDataApi } from "../../useDataApi"
-import { State } from "../../styledState"
+import { SelectStyled, Input, Option, State } from "./styled";
+import { useDataApi } from "../../DataAPI/useDataApi"
 import { AiFillBank } from "react-icons/ai"
 const Select = ({
-
   quantity,
   setQuantity,
   selectCurrency,

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SelectStyled = styled.span`
     width: 100%;
@@ -30,3 +30,17 @@ export const Option = styled.select`
     padding: 8px;
     box-shadow: 6px -6px 10px -1px ${({theme}) => theme.colors.shadow};
 `;
+
+export const State = styled.span`
+   text-decoration:none;
+   color:${({ theme }) => theme.colors.midGray};
+   font-size: 15px;
+   display:flex;
+   justify-content: center;
+
+ ${(props) => props.date && css`
+   font-size: 20px;
+   color:${({ theme }) => theme.colors.black}
+  `}
+`;
+
