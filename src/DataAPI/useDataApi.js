@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import Loading from "./Loading";
 
-
-
 export const useDataApi = () => {
   const [post, setPost] = useState({
     state: Loading
@@ -14,7 +12,7 @@ export const useDataApi = () => {
         const response = await fetch(
           'https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,HRK'
         )
-       if (!response.ok) {
+        if (!response.ok) {
           throw new Error(response.statusText);
         };
         const { date, rates } = await response.json();
