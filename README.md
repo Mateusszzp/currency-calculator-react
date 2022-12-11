@@ -1,12 +1,15 @@
 
 # currency-calculator-react
 ## Technologies used
-- BEM 
-- Flex Box
+- CSS (BEM, Grid, Flex, Box)
+- webpack
+- og:image
 - ES6+
 - React JS
-- React styled-components
-- API
+- React:
+    styled-components, localStorage, npm ,date, setInterval, API 
+    hooks: useState, useEffect, useRef,  
+
 
 ## Description
 A simple application for currency conversion
