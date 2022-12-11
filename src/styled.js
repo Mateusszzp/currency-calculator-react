@@ -16,6 +16,6 @@ export const GlobalStyle = createGlobalStyle`
   background-size: 200px;
   background-attachment: fixed;
   background-repeat: space;
-  min-height: 100%;
+  min-height: 100vh;
   }
 `;
