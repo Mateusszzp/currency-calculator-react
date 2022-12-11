@@ -3,12 +3,16 @@
 ## Technologies used
 - CSS (BEM, Grid, Flex, Box)
 - webpack
+- icon
 - og:image
 - ES6+
 - React JS
 - React:
-    styled-components, localStorage, npm ,date, setInterval, API 
+    styled-components, localStorage, npm ,date, setInterval,setTimeout, API 
     hooks: useState, useEffect, useRef,  
+- normalize/cdn
+- google/fonts
+
 
 
 ## Description
