@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import Loading from "./Loading";
 
 export const useDataApi = () => {
-  const [post, setPost] = useState({
+  const [dataApi, setdataApi] = useState({
     state: Loading
   });
 
   useEffect(() => {
-    const dataApi = async () => {
+    const downloadApi = async () => {
       try {
         const response = await fetch(
           'https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,HRK'
@@ -16,20 +16,20 @@ export const useDataApi = () => {
           throw new Error(response.statusText);
         };
         const { date, rates } = await response.json();
-        setPost({
+        setdataApi({
           state: "Kursy walut pochodzą z NBP na dzień ",
           date,
           rates,
         });
       }
       catch (error) {
-        setPost({
+        setdataApi({
           state: "UPS coś poszło nie tak zobacz czy masz połączenie z internetem",
         })
       }
     };
-    setTimeout(dataApi, 3000)
+    setTimeout(downloadApi, 3000)
   }, []);
-  return { post };
+  return { dataApi };
 };
 

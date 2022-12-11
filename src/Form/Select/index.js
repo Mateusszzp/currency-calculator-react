@@ -7,7 +7,7 @@ const Select = ({
   selectCurrency,
   setSelectCurency }) => {
 
-  const { post } = useDataApi();
+  const { dataApi } = useDataApi();
 
   return (
     <div>
@@ -28,7 +28,7 @@ const Select = ({
         <Option
           value={selectCurrency}
           onChange={({ target }) => setSelectCurency(target.value)}>
-          {post.rates && Object.keys(post.rates).map((currency) => (
+          {dataApi.rates && Object.keys(dataApi.rates).map((currency) => (
             <option
               key={currency}
               value={currency}>
@@ -37,9 +37,9 @@ const Select = ({
           ))};
         </Option>
       </p>
-      <p> <State>{post.state}
+      <p> <State>{dataApi.state}
       </State>
-        <State date>{post.date}
+        <State date>{dataApi.date}
           <AiFillBank />
         </State>
       </p>

@@ -5,9 +5,9 @@ import { useDataApi } from "./DataAPI/useDataApi"
 
 function App() {
   const [result, setResult] = useState();
-  const { post } = useDataApi()
+  const { dataApi } = useDataApi()
   const calculateResult = (selectCurrency, quantity) => {
-    const rate = post.rates[selectCurrency]
+    const rate = dataApi.rates[selectCurrency]
 
     setResult({
       sourceAmount: +quantity,
