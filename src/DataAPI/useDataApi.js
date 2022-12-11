@@ -17,7 +17,7 @@ export const useDataApi = () => {
         };
         const { date, rates } = await response.json();
         setPost({
-          state: "Kursy wlut pochodzą z NBP na dzień ",
+          state: "Kursy walut pochodzą z NBP na dzień ",
           date,
           rates,
         });
