@@ -12,9 +12,10 @@ function App() {
     setResult({
       sourceAmount: +quantity,
       targetAmount: quantity * rate,
+      showRate: 1 / rate,
       selectCurrency,
     });
-  }
+  };
   return (
     <main>
       <Form

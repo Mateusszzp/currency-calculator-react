@@ -28,7 +28,7 @@ export const useDataApi = () => {
         })
       }
     };
-    setTimeout(downloadApi, 3000)
+    setTimeout(downloadApi, 3000);
   }, []);
   return { dataApi };
 };
