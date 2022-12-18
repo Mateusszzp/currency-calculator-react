@@ -11,6 +11,6 @@ export const ResultStyled = styled.span`
   ${({ rate }) => rate && css`
     font-size: 17px;
     color:${({ theme }) => theme.colors.midGray};
- `}
+  `}
 `;
 

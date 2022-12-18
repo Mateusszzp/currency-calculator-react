@@ -1,6 +1,7 @@
-import { SelectStyled, Input, Option, State } from "./styled";
+import { SelectStyled, Input, Option, State, StyledLoading } from "./styled";
 import { useDataApi } from "../../DataAPI/useDataApi"
 import { AiFillBank } from "react-icons/ai"
+import Loading from "../../DataAPI/Loading"
 const Select = ({
   quantity,
   setQuantity,
@@ -37,13 +38,25 @@ const Select = ({
           ))};
         </Option>
       </p>
-      <p> <State>{dataApi.state}
-      </State>
-        <State date>{dataApi.date}
+      <p>
+        {dataApi.state === "loading" ?
+          <StyledLoading>{Loading}</StyledLoading>
+          :
+          dataApi.state === "succes" ?
+            (<State>
+              Kursy walut pochodzą z NBP na dzień
+            </State>)
+            :
+            (<State>
+              UPS coś poszło nie tak zobacz czy masz połączenie z internetem
+            </State>)
+        }
+        <State date>
+          {dataApi.date}
           <AiFillBank />
         </State>
       </p>
-    </div>
+    </div >
 
   );
 };
