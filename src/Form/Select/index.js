@@ -44,16 +44,17 @@ const Select = ({
           :
           dataApi.state === "succes" ?
             (<State>
-              Kursy walut pochodzą z NBP na dzień
+              Kursy walut pochodzą z NBP na dzień 
             </State>)
             :
             (<State>
               UPS coś poszło nie tak zobacz czy masz połączenie z internetem
-            </State>)
+               </State>)
         }
         <State date>
+              <AiFillBank/>&nbsp;{" "}
           {dataApi.date}
-          <AiFillBank />
+          
         </State>
       </p>
     </div >
