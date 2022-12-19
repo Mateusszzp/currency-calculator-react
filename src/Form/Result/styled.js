@@ -9,8 +9,9 @@ export const ResultStyled = styled.span`
     font-weight:bold;
 
   ${({ rate }) => rate && css`
-    font-size: 17px;
+    font-size: 15px;
     color:${({ theme }) => theme.colors.midGray};
+    font-weight: normal;
   `}
 `;
 
