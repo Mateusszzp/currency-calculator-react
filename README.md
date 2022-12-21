@@ -2,16 +2,18 @@
 # currency-calculator-react
 ## Technologies used
 - CSS (BEM, Grid, Flex, Box)
-- webpack
+- normalize/cdn
+- google/fonts
 - icon
 - og:image
 - ES6+
+- webpack
 - React JS
 - React:
     styled-components, localStorage, npm ,date, setInterval,setTimeout, API 
-    hooks: useState, useEffect, useRef,  
-- normalize/cdn
-- google/fonts
+    hooks: useState, useEffect, useRef, costum hook
+- downloading data via API : fetch, axios, Error handling
+
 
 
 
