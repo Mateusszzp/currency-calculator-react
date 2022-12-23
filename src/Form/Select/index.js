@@ -12,7 +12,7 @@ const Select = ({
 
   return (
     <div>
-      <p>
+      
         <SelectStyled > Wpisz zł* </SelectStyled>
         <Input
           value={quantity}
@@ -23,7 +23,7 @@ const Select = ({
           min="1"
           step="any"
         />
-      </p>
+      
       <p>
         <SelectStyled> Wybierz walute </SelectStyled>
         <Option

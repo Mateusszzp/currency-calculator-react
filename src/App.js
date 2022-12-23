@@ -17,12 +17,14 @@ function App() {
     });
   };
   return (
-    <main>
+    
+     <>
       <Form
         result={result}
         calculateResult={calculateResult} />
       <Footer />
-    </main>
+      </>
+    
   );
 };
 
