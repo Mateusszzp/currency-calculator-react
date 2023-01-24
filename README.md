@@ -22,7 +22,7 @@ A simple application for currency conversion
 
 
 
-## 👀**DEMO**🎞
+## 👀**DEMO**
 
 https://mateusszzp.github.io/currency-calculator-react/
 
