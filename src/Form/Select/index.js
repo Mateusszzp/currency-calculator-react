@@ -11,8 +11,10 @@ const Select = ({
   const { dataApi } = useDataApi();
 
   return (
-    <div>
-      
+    dataApi.state === "loading" ?
+      <StyledLoading>{Loading}</StyledLoading>
+      :
+      (<>
         <SelectStyled > Wpisz zł* </SelectStyled>
         <Input
           value={quantity}
@@ -21,44 +23,34 @@ const Select = ({
           type="number"
           name="zl"
           min="1"
-          step="any"
-        />
-      
-      <p>
-        <SelectStyled> Wybierz walute </SelectStyled>
-        <Option
-          value={selectCurrency}
-          onChange={({ target }) => setSelectCurency(target.value)}>
-          {dataApi.rates && Object.keys(dataApi.rates).map((currency) => (
-            <option
-              key={currency}
-              value={currency}>
-              {currency}
-            </option>
-          ))};
-        </Option>
-      </p>
-      <p>
-        {dataApi.state === "loading" ?
-          <StyledLoading>{Loading}</StyledLoading>
+          step="any" />
+        <p>
+          <SelectStyled> Wybierz walute </SelectStyled>
+          <Option
+            value={selectCurrency}
+            onChange={({ target }) => setSelectCurency(target.value)}>
+            {dataApi.rates && Object.keys(dataApi.rates).map((currency) => (
+              <option
+                key={currency}
+                value={currency}>
+                {currency}
+              </option>
+            ))};
+          </Option>
+        </p>
+        {dataApi.state === "succes" ?
+          (<State>
+            Kursy walut pochodzą z NBP na dzień
+          </State>)
           :
-          dataApi.state === "succes" ?
-            (<State>
-              Kursy walut pochodzą z NBP na dzień 
-            </State>)
-            :
-            (<State>
-              UPS coś poszło nie tak zobacz czy masz połączenie z internetem
-               </State>)
-        }
+          (<State>
+            UPS coś poszło nie tak zobacz czy masz połączenie z internetem
+          </State>)}
         <State date>
-              <AiFillBank/>&nbsp;{" "}
+          <AiFillBank />&nbsp;{" "}
           {dataApi.date}
-          
         </State>
-      </p>
-    </div >
-
+      </>)
   );
 };
 export default Select;
