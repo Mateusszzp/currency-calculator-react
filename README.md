@@ -8,7 +8,6 @@
 - og:image
 - ES6+
 - webpack
-- React JS
 - React:
     styled-components, localStorage, npm ,date, setInterval,setTimeout, API 
     hooks: useState, useEffect, useRef, costum hook
