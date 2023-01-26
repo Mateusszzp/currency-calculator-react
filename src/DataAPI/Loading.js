@@ -5,5 +5,5 @@ const Loading = (
         strokeOpacity={.75}
         strokeWidth={"center"}
     />
-)
+);
 export default Loading
