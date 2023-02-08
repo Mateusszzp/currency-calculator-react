@@ -15,3 +15,4 @@ export const ResultStyled = styled.span`
   `}
 `;
 
+

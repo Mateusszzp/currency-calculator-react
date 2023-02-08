@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 export const FormStyled  = styled.form`
    max-width: 700px;
-   padding: 250px 50px;
+   padding: 250px 30px;
    margin: 0 auto;
    overflow: auto;
+   @media (max-width: 768px){
+      max-height: 987px;
+   }
 `;
 export const Fieldset = styled.fieldset`
    border: 1px solid ${({theme}) => theme.colors.doveGray};

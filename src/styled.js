@@ -1,21 +1,20 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import background from "./background.jpg"
 
 export const GlobalStyle = createGlobalStyle`
   html {
   box-sizing: border-box;
-}
+   }
 
 *, ::after, ::before {
   box-sizing: inherit;
-}
+   }
 
   #root {
   font-family: 'Roboto Slab', serif;
   background-image:url("${background}");
-  background-size: 200px;
+  background-size: 250px;
   background-attachment: fixed;
-  background-repeat: space;
-  min-height: 100vh;
-  }
+  background-repeat:repeat;
+   }
 `;
