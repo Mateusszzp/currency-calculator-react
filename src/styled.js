@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   #root {
   font-family: 'Roboto Slab', serif;
   background-image:url("${background}");
-  background-size: 250px;
+  background-size: 300px;
   background-attachment: fixed;
   background-repeat:repeat;
    }
