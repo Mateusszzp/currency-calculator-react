@@ -43,6 +43,7 @@ export const State = styled.span`
    color:${({ theme }) => theme.colors.black}
   `}
 `;
+
 export const StyledLoading = styled.span`
     display: flex;
     justify-content: center;
