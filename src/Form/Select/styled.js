@@ -15,7 +15,7 @@ export const Input = styled.input`
     padding: 8px;
     box-shadow: 6px -6px 10px -1px ${({ theme }) => theme.colors.shadow};
 
-&:required {
+  &:required {
     border-color: hsl(0, 0%, 40%);
     background: #d1f6ea;
     }
@@ -38,7 +38,7 @@ export const State = styled.span`
    display:flex;
    justify-content: center;
 
- ${(props) => props.date && css`
+  ${(props) => props.date && css`
    font-size: 20px;
    color:${({ theme }) => theme.colors.black}
   `}
