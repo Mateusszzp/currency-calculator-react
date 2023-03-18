@@ -7,14 +7,14 @@ export const GlobalStyle = createGlobalStyle`
    }
 
 *, ::after, ::before {
-  box-sizing: inherit;
+      box-sizing: inherit;
    }
 
   #root {
-  font-family: 'Roboto Slab', serif;
-  background-image:url("${background}");
-  background-size: 300px;
-  background-attachment: fixed;
-  background-repeat:repeat;
+      font-family: 'Roboto Slab', serif;
+      background-image:url("${background}");
+      background-size: 300px;
+      background-attachment: fixed;
+      background-repeat:repeat;
    }
 `;
