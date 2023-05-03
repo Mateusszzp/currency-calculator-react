@@ -9,14 +9,6 @@ export const useDataApi = () => {
   useEffect(() => {
     const downloadApi = async () => {
       try {
-        // fetch
-        //const response = await fetch(
-        //   'https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,HRK')
-        // if (!response.ok) {
-        //   throw new Error(response.statusText);
-        // };
-        //  const { date, rates } = await response.json();
-
         const response = await axios.get(
           'https://api.exchangerate.host/latest?base=PLN&symbols=USD,EUR,GBP,HRK')
 
