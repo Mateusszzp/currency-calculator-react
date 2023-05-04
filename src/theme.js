@@ -1,5 +1,6 @@
 
 export const theme = {
+    
     colors: {
         turquoise: "#22f3b1",
         white: "#fbfdfc",
